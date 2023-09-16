@@ -15,10 +15,6 @@ public class main {
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("JPA_clase01x");
 		EntityManager em = fabrica.createEntityManager();
 		
-		 
-		
-		
-		
 		Query query = em.createNativeQuery("{call usp_validaAcceso(?,?)}", TbUsuario.class);
 		query.setParameter(1, "U002@gmail.com");
 		query.setParameter(2, "10002");
